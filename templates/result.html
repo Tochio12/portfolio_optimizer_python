@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Optimization Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Optimal Portfolio Weights</h1>
+    <p>Here are the weights for your selected stocks:</p>
+    <img src="{{ plot_url }}" alt="Optimal Weights Chart">
+    <p><a href="/">Search for another 5 stocks</a></p>
+</body>
+</html>
+
