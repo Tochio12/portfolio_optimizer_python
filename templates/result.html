@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Optimization Results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
     <h1>Optimal Portfolio Weights</h1>
     <p>Here are the weights for your selected stocks:</p>
+    
+    <!-- Display the optimal weights as percentages -->
+    <table>
+        <tr>
+            <th>Stock</th>
+            <th>Optimal Weight</th>
+        </tr>
+        {% for ticker, weight in ticker_weights %}
+        <tr>
+            <td>{{ ticker }}</td>
+            <td>{{ '%.2f' % (weight * 100) }}%</td>  <!-- Convert weight to percentage -->
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Show the plot -->
     <img src="{{ plot_url }}" alt="Optimal Weights Chart">
     <p><a href="/">Search for another 5 stocks</a></p>
 </body>
