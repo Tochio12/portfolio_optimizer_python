@@ -89,3 +89,19 @@ label{
 p{
     padding-left: 20px;
 }
+
+#suggestions {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.suggestion-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
